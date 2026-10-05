@@ -1,0 +1,543 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home Hub + น้องบ้าน · Mockup</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@500;600;700&family=IBM+Plex+Sans+Thai:wght@400;500;600&display=swap">
+<style>
+:root{--bg:#EDEAE2;--ground:#F6F4EF;--ink:#1C1B19;--muted:#5E5A52;--line:#E6E1D6;--teal:#0F5257;--tealSoft:#CFE3E1;--tealPale:#E3EFEE;--orange:#C2410C;--orangeText:#B4480E;--peach:#FCEBDD;--amber:#F2A65A;--card:#FFFFFF}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'IBM Plex Sans Thai',sans-serif}
+a{color:var(--orangeText);text-decoration:none}
+button{font-family:inherit;cursor:pointer}
+.disp{font-family:'Bai Jamjuree',sans-serif}
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px}
+header.top{padding:48px 0 8px}
+header.top .kick{font-family:'Bai Jamjuree',sans-serif;color:var(--orangeText);font-weight:600;letter-spacing:.04em}
+header.top h1{font-family:'Bai Jamjuree',sans-serif;font-size:clamp(30px,5vw,46px);margin:6px 0 10px;line-height:1.15}
+header.top p{color:var(--muted);max-width:760px;line-height:1.75;margin:0}
+.toc{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 0}
+.toc a{background:var(--card);border:1px solid var(--line);color:var(--ink);padding:8px 14px;border-radius:20px;font-size:14px}
+.toc a:hover{border-color:var(--teal);color:var(--teal)}
+.feature{padding:56px 0 24px;border-top:1px solid #DAD5CA;margin-top:40px}
+.fhead{display:flex;flex-wrap:wrap;gap:28px;align-items:flex-start;margin-bottom:28px}
+.fhead .l{flex:1 1 420px;min-width:0}
+.fhead .num{font-family:'Bai Jamjuree',sans-serif;color:var(--orangeText);font-weight:600}
+.fhead h2{font-family:'Bai Jamjuree',sans-serif;font-size:clamp(26px,4vw,36px);margin:4px 0 10px}
+.fhead p{line-height:1.75;margin:0 0 8px}
+.kpi{flex:1 1 320px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px 18px}
+.kpi h4{margin:0 0 8px;font-size:14px;color:var(--teal)}
+.kpi ul{margin:0;padding-left:18px;font-size:14px;line-height:1.75}
+.screens{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:36px 28px}
+.shot{display:flex;flex-direction:column;align-items:center;gap:14px}
+.cap{width:100%;max-width:360px}
+.cap .tag{font-family:'Bai Jamjuree',sans-serif;font-size:13px;font-weight:600;color:var(--orangeText)}
+.cap h3{font-family:'Bai Jamjuree',sans-serif;font-size:19px;margin:2px 0 6px}
+.cap p,.cap li{font-size:14px;line-height:1.7;color:#3A3732}
+.cap ul{margin:4px 0 0;padding-left:18px}
+.try{display:inline-block;background:var(--tealPale);color:var(--teal);font-size:12px;font-weight:600;padding:2px 10px;border-radius:10px;margin-top:6px}
+/* phone */
+.phone{width:360px;max-width:100%;height:760px;background:var(--ground);border-radius:34px;border:8px solid #1C1B19;overflow:hidden;display:flex;flex-direction:column;position:relative;box-shadow:0 18px 36px rgba(0,0,0,.12)}
+.scr{flex:1;padding:18px 16px;display:flex;flex-direction:column;gap:12px;overflow:hidden;min-height:0}
+.bar{display:flex;align-items:center;gap:4px;min-height:44px}
+.back{width:40px;height:44px;display:flex;align-items:center;justify-content:flex-start;color:var(--ink)}
+.ttl{font-family:'Bai Jamjuree',sans-serif;font-size:18px;font-weight:600}
+.sub{font-size:12px;color:var(--muted)}
+.h3{font-family:'Bai Jamjuree',sans-serif;font-size:15px;font-weight:600}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px}
+.hero{background:var(--teal);color:#fff;border-radius:20px;padding:16px;display:flex;flex-direction:column;gap:8px}
+.hero .s{font-size:12px;color:var(--tealSoft)}
+.peach{background:var(--peach);border-radius:14px;padding:12px 14px;font-size:13px;line-height:1.6}
+.pale{background:var(--tealPale);border-radius:14px;padding:12px 14px;font-size:13px;line-height:1.6}
+.row{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:11px 0;border-bottom:1px solid #EFEBE2;font-size:13px}
+.row:last-child{border-bottom:none}
+.btn{height:48px;border-radius:24px;display:flex;align-items:center;justify-content:center;font-weight:600;font-size:15px;border:none;width:100%;flex-shrink:0}
+.btn.pri{background:var(--orange);color:#fff}
+.btn.sec{background:transparent;border:1.5px solid var(--teal);color:var(--teal)}
+.chip{height:36px;padding:0 13px;border-radius:18px;background:var(--card);border:1px solid #DDD8CC;color:var(--ink);display:inline-flex;align-items:center;font-size:13px;flex-shrink:0}
+.chip[aria-pressed="true"]{background:var(--teal);border-color:var(--teal);color:#fff}
+.g2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.g4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.qt{display:flex;flex-direction:column;align-items:center;gap:6px;font-size:12px;color:var(--ink);text-align:center}
+.qt span.ic{width:48px;height:48px;border-radius:16px;background:var(--card);border:1px solid var(--line);display:flex;align-items:center;justify-content:center}
+.badge{font-size:11px;padding:2px 8px;border-radius:8px;font-weight:600;white-space:nowrap}
+.b-bank{background:var(--tealPale);color:var(--teal)}
+.b-me{background:#EFEBE2;color:var(--muted)}
+.b-warn{background:var(--peach);color:var(--orangeText)}
+.doc{display:flex;align-items:center;gap:12px;padding:11px 0;border-bottom:1px solid #EFEBE2}
+.doc:last-child{border-bottom:none}
+.doc .fi{width:38px;height:44px;border-radius:8px;background:var(--tealPale);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:10px;font-weight:700;color:var(--teal)}
+.doc .t{flex:1;min-width:0;font-size:13px}
+.doc .t b{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tl{display:flex;gap:12px}
+.tl .dot{width:12px;display:flex;flex-direction:column;align-items:center}
+.tl .dot i{width:12px;height:12px;border-radius:6px;background:var(--teal);display:block;flex-shrink:0;margin-top:4px}
+.tl .dot s{flex:1;width:2px;background:var(--line);display:block}
+.tl .body{flex:1;padding-bottom:14px;font-size:13px;line-height:1.55}
+.plan{border:1.5px solid var(--line);border-radius:14px;padding:12px;background:#fff;text-align:left;width:100%;display:block;color:var(--ink)}
+.plan[aria-pressed="true"]{border-color:var(--teal);background:var(--tealPale)}
+.plan b{font-size:14px}
+.bub{max-width:86%;padding:10px 13px;font-size:13.5px;line-height:1.6}
+.bub.me{align-self:flex-end;background:var(--teal);color:#fff;border-radius:18px 18px 4px 18px}
+.bub.ai{align-self:flex-start;background:#fff;border:1px solid var(--line);border-radius:18px 18px 18px 4px}
+.chat{flex:1;display:flex;flex-direction:column;gap:10px;overflow-y:auto;min-height:0;padding-right:2px}
+.inbar{display:flex;gap:8px;align-items:center;flex-shrink:0}
+.inbar .field{flex:1;height:46px;border-radius:23px;background:#fff;border:1px solid #DDD8CC;display:flex;align-items:center;padding:0 14px;font-size:13px;color:var(--muted)}
+.mic{width:46px;height:46px;border-radius:23px;border:none;background:var(--orange);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.qr{display:flex;gap:6px;overflow-x:auto;flex-shrink:0;padding-bottom:2px}
+.qr .chip{height:34px;font-size:12px}
+.sheet{position:absolute;left:0;right:0;bottom:0;background:#fff;border-radius:24px 24px 0 0;padding:16px 18px 20px;box-shadow:0 -8px 24px rgba(0,0,0,.12);display:flex;flex-direction:column;gap:10px}
+.dim{position:absolute;inset:0;background:rgba(28,27,25,.35)}
+.grab{width:40px;height:4px;border-radius:2px;background:#D9D3C6;align-self:center}
+.step{display:flex;gap:12px;align-items:flex-start}
+.step .c{width:26px;height:26px;border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0}
+.c.done{background:var(--teal);color:#fff}
+.c.now{background:var(--orange);color:#fff}
+.c.todo{background:#EFEBE2;color:var(--muted)}
+.pulse{width:120px;height:120px;border-radius:60px;background:var(--orange);border:none;display:flex;align-items:center;justify-content:center;align-self:center;box-shadow:0 0 0 0 rgba(194,65,12,.4)}
+.pulse.on{animation:p 1.4s infinite}
+@keyframes p{0%{box-shadow:0 0 0 0 rgba(194,65,12,.45)}70%{box-shadow:0 0 0 26px rgba(194,65,12,0)}100%{box-shadow:0 0 0 0 rgba(194,65,12,0)}}
+input[type=range]{width:100%;accent-color:var(--teal)}
+select{font-family:inherit;font-size:14px;height:44px;border-radius:12px;border:1px solid #DDD8CC;padding:0 10px;background:#fff;width:100%}
+.arch{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;margin-top:28px}
+.arch .box{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 18px}
+.arch h4{margin:0 0 8px;font-family:'Bai Jamjuree',sans-serif;font-size:16px}
+.arch ul{margin:0;padding-left:18px;font-size:14px;line-height:1.75}
+.foot{font-size:12px;color:var(--muted);line-height:1.7;padding:40px 0 56px}
+@media (max-width:400px){.screens{grid-template-columns:1fr}.phone{border-width:6px}}
+@media (prefers-reduced-motion:reduce){.pulse.on{animation:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+<div class="kick">GHB ALL GEN · CONCEPT MOCKUP</div>
+<h1>Home Hub และผู้ช่วย AI "น้องบ้าน"</h1>
+<p>ม็อกอัปสองฟีเจอร์ใหม่ แยกเป็น flow ย่อยรวม 11 หน้าจอ แต่ละหน้าจออธิบายว่าลูกค้าทำอะไรได้และทำไมจึงออกแบบแบบนั้น หน้าจอที่มีป้าย <span class="try">ลองกดได้</span> ใช้งานได้จริงในไฟล์นี้ ตัวเลข ชื่อ และที่อยู่ทั้งหมดเป็นข้อมูลตัวอย่าง</p>
+<nav class="toc" aria-label="สารบัญ">
+<a href="#hub">ฟีเจอร์ 1 · Home Hub</a><a href="#ai">ฟีเจอร์ 2 · น้องบ้าน</a><a href="#behind">เบื้องหลังระบบและกติกา</a>
+</nav>
+</header>
+
+<!-- ================= FEATURE 1 ================= -->
+<section class="feature" id="hub">
+<div class="fhead">
+<div class="l">
+<div class="num">ฟีเจอร์ 1</div>
+<h2>บ้านของฉัน (Home Hub)</h2>
+<p>หลังกู้เสร็จ ลูกค้าแทบไม่มีเหตุผลเปิดแอป นอกจากจ่ายงวด Home Hub ทำให้แอปเป็นที่ดูแลทุกเรื่องของบ้าน ตั้งแต่ติดตามมูลค่าทรัพย์ เก็บเอกสาร ต่อประกัน ไปจนถึงหาช่างและขอสินเชื่อซ่อมแซม</p>
+</div>
+<div class="kpi"><h4>ผลที่คาดหวังและตัวชี้วัด</h4><ul>
+<li>ลูกค้าใช้แอปต่อเนื่องหลังกู้ → วัดจากผู้ใช้งานรายเดือน (MAU) ของกลุ่มที่ผ่อนอยู่</li>
+<li>รายได้ค่าธรรมเนียมจากประกันและพาร์ทเนอร์ → วัดจากอัตราการต่อประกันผ่านแอป</li>
+<li>ขายสินเชื่อกู้เพิ่มได้ตรงจังหวะ → วัดจากยอดสินเชื่อซ่อมแซม/กู้เพิ่มที่มาจาก Home Hub</li>
+</ul></div>
+</div>
+
+<div class="screens">
+
+<!-- H1 -->
+<div class="shot">
+<div class="phone"><div class="scr">
+<div class="bar"><div class="ttl">บ้านของฉัน</div></div>
+<div class="hero">
+<div class="s">ทาวน์โฮม 2 ชั้น · 24 ตร.ว. · [ที่อยู่ทรัพย์]</div>
+<div style="display:flex;align-items:center;gap:14px">
+<svg width="76" height="76" viewBox="0 0 76 76" aria-label="Equity 43%"><circle cx="38" cy="38" r="31" fill="none" stroke="#2C7075" stroke-width="9"/><circle cx="38" cy="38" r="31" fill="none" stroke="#F2A65A" stroke-width="9" stroke-dasharray="83.8 194.8" stroke-linecap="round" transform="rotate(-90 38 38)"/><text x="38" y="43" text-anchor="middle" fill="#fff" font-size="15" font-weight="700" font-family="Bai Jamjuree">43%</text></svg>
+<div><div class="s">มูลค่าประเมินโดยประมาณ</div><div class="disp" style="font-size:24px;font-weight:600">฿3,200,000</div><div class="s">ส่วนของคุณ <b style="color:#F7C08A">฿1,357,440</b></div></div>
+</div>
+</div>
+<div class="g4">
+<a class="qt" href="#h3"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0F5257" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h10l6 6v10H4z"/><path d="M14 4v6h6"/></svg></span>เอกสาร</a>
+<a class="qt" href="#h4"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0F5257" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></svg></span>ประกัน</a>
+<a class="qt" href="#h4"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0F5257" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></span>ภาษีบ้าน</a>
+<a class="qt" href="#h5"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0F5257" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/></svg></span>ซ่อม-แต่ง</a>
+</div>
+<div class="h3">ต้องทำเร็ว ๆ นี้ (3)</div>
+<div class="peach" style="display:flex;justify-content:space-between;align-items:center;gap:8px"><span><b>ประกันอัคคีภัย</b> หมดอายุใน 24 วัน</span><a href="#h4" style="font-weight:600;white-space:nowrap">ต่ออายุ</a></div>
+<div class="card" style="padding:12px 14px;display:flex;justify-content:space-between;align-items:center;font-size:13px;border-radius:14px"><span><b>หนังสือรับรองดอกเบี้ยปี 2569</b> พร้อมแล้ว</span><a href="#h3" style="font-weight:600">ดู</a></div>
+<div class="card" style="padding:12px 14px;display:flex;justify-content:space-between;align-items:center;font-size:13px;border-radius:14px"><span><b>ภาษีที่ดินฯ</b> ครบกำหนด 30 เม.ย.</span><a href="#h4" style="font-weight:600">ตั้งเตือน</a></div>
+<a href="#h2" class="pale" style="display:flex;justify-content:space-between;align-items:center;color:var(--ink);margin-top:auto"><span>มูลค่าบ้านคุณ <b>+4.2%</b> ใน 12 เดือน</span><span style="color:var(--teal);font-weight:600">ดูรายละเอียด ›</span></a>
+</div></div>
+<div class="cap"><div class="tag">H1 · หน้าหลัก</div><h3>ภาพรวมบ้านของฉัน</h3>
+<ul><li>วงแหวน Equity บอกว่าบ้านเป็นของลูกค้าแล้วกี่เปอร์เซ็นต์ ทำให้รู้สึกถึงความคืบหน้าทุกครั้งที่เปิดแอป</li>
+<li>"ต้องทำเร็ว ๆ นี้" รวมทุกอย่างที่มีวันครบกำหนด เรียงตามความเร่งด่วน สีส้มคือเรื่องที่ต้องทำภายใน 30 วัน</li>
+<li>ทางลัด 4 ปุ่มพาไปหน้าย่อยทั้งหมดของ Home Hub</li></ul></div>
+</div>
+
+<!-- H2 -->
+<div class="shot" id="h2">
+<div class="phone"><div class="scr">
+<div class="bar"><a class="back" href="#hub" aria-label="ย้อนกลับ"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg></a><div class="ttl">มูลค่าบ้าน & Equity</div></div>
+<div class="card" style="padding:14px">
+<div style="display:flex;gap:14px;font-size:12px;margin-bottom:6px"><span><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#0F5257"></span> มูลค่าบ้าน</span><span><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#C2410C"></span> ยอดหนี้คงเหลือ</span></div>
+<svg viewBox="0 0 300 160" width="100%" aria-label="กราฟมูลค่าบ้านเทียบยอดหนี้ 2565–2569">
+<g stroke="#EFEBE2"><line x1="30" y1="20" x2="295" y2="20"/><line x1="30" y1="60" x2="295" y2="60"/><line x1="30" y1="100" x2="295" y2="100"/><line x1="30" y1="140" x2="295" y2="140"/></g>
+<g font-size="9" fill="#5E5A52"><text x="0" y="23">3.5M</text><text x="0" y="63">2.5M</text><text x="0" y="103">1.5M</text><text x="0" y="143">0.5M</text>
+<text x="30" y="156">2565</text><text x="94" y="156">66</text><text x="158" y="156">67</text><text x="222" y="156">68</text><text x="280" y="156">69</text></g>
+<path d="M32 44 L96 40 L160 36 L224 34 L288 28 L288 70 L224 66 L160 60 L96 54 L32 48 Z" fill="#F2A65A" opacity=".28"/>
+<polyline points="32,44 96,40 160,36 224,34 288,28" fill="none" stroke="#0F5257" stroke-width="2.5"/>
+<polyline points="32,48 96,54 160,60 224,66 288,70" fill="none" stroke="#C2410C" stroke-width="2.5"/>
+<text x="232" y="52" font-size="10" fill="#8A350A" font-weight="600">Equity</text>
+</svg>
+</div>
+<div class="g2">
+<div class="card" style="padding:12px;font-size:12px;color:var(--muted)">ราคาเฉลี่ยในโครงการ<br><b style="font-size:15px;color:var(--ink)">฿132,000/ตร.ว.</b></div>
+<div class="card" style="padding:12px;font-size:12px;color:var(--muted)">ความมั่นใจในการประเมิน<br><b style="font-size:15px;color:var(--ink)">ปานกลาง</b></div>
+</div>
+<div class="h3">ซื้อขายใกล้เคียง 12 เดือน</div>
+<div class="card" style="padding:2px 14px">
+<div class="row"><span>ทาวน์โฮม 2 ชั้น · 300 ม.</span><b>฿3.15M</b></div>
+<div class="row"><span>ทาวน์โฮม 2 ชั้น · 650 ม.</span><b>฿3.28M</b></div>
+<div class="row"><span>ทาวน์โฮม 2 ชั้น · 1.1 กม.</span><b>฿3.05M</b></div>
+</div>
+<div class="peach"><b>วงเงินกู้เพิ่มโดยประมาณ ฿480,000</b><br>คำนวณจาก Equity และประวัติผ่อนดี 36 งวด</div>
+<button class="btn pri" style="margin-top:auto">ขอประเมินจริง / กู้เพิ่ม</button>
+<div class="sub" style="text-align:center">ราคาประมาณจากข้อมูลตลาด ไม่ใช่ราคาประเมินทางการ</div>
+</div></div>
+<div class="cap"><div class="tag">H2 · มูลค่าทรัพย์</div><h3>มูลค่าบ้านและ Equity</h3>
+<ul><li>กราฟสองเส้นแสดงมูลค่าบ้านที่เพิ่มขึ้นและหนี้ที่ลดลง พื้นที่ระหว่างสองเส้นคือ Equity</li>
+<li>ประเมินจากราคาซื้อขายจริงรอบทรัพย์ ฐานข้อมูลราคาประเมินของธนาคาร และดัชนีราคาที่อยู่อาศัย พร้อมบอกระดับความมั่นใจเพื่อความโปร่งใส</li>
+<li>จุดขาย: แจ้งวงเงินกู้เพิ่มโดยประมาณตอนที่ลูกค้ากำลังดูเรื่องบ้าน กดเพื่อนัดประเมินจริงได้</li></ul></div>
+</div>
+
+<!-- H3 -->
+<div class="shot" id="h3">
+<div class="phone"><div class="scr">
+<div class="bar"><a class="back" href="#hub" aria-label="ย้อนกลับ"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg></a><div class="ttl">ตู้เอกสารดิจิทัล</div></div>
+<label style="height:44px;border-radius:22px;background:#fff;border:1px solid #DDD8CC;display:flex;align-items:center;gap:8px;padding:0 14px;font-size:13px;color:var(--muted)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg><span style="position:absolute;width:1px;height:1px;overflow:hidden">ค้นหาเอกสาร</span><input type="search" placeholder="ค้นหา เช่น โฉนด, กรมธรรม์" style="border:none;outline:none;flex:1;font-family:inherit;font-size:13px;min-width:0;background:transparent"></label>
+<div class="qr" id="docFilter">
+<button class="chip" data-f="all" aria-pressed="true">ทั้งหมด</button>
+<button class="chip" data-f="loan" aria-pressed="false">สินเชื่อ</button>
+<button class="chip" data-f="ins" aria-pressed="false">ประกัน</button>
+<button class="chip" data-f="tax" aria-pressed="false">ภาษี</button>
+<button class="chip" data-f="home" aria-pressed="false">ทรัพย์</button>
+</div>
+<div class="card" style="padding:2px 14px;flex:1;overflow:auto;min-height:0" id="docList">
+<div class="doc" data-c="loan"><div class="fi">PDF</div><div class="t"><b>สัญญาเงินกู้ ···4821</b><span class="sub">ลงนาม 12 มี.ค. 2565</span></div><span class="badge b-bank">จากธนาคาร</span></div>
+<div class="doc" data-c="tax"><div class="fi">PDF</div><div class="t"><b>หนังสือรับรองดอกเบี้ย 2569</b><span class="sub">ใช้ลดหย่อนภาษี</span></div><span class="badge b-bank">ใหม่</span></div>
+<div class="doc" data-c="home"><div class="fi">JPG</div><div class="t"><b>สำเนาโฉนดที่ดิน</b><span class="sub">สแกนจากกล้อง</span></div><span class="badge b-me">อัปโหลดเอง</span></div>
+<div class="doc" data-c="ins"><div class="fi">PDF</div><div class="t"><b>กรมธรรม์อัคคีภัย</b><span class="sub">หมดอายุ 29 ต.ค. 2569</span></div><span class="badge b-warn">ใกล้หมด</span></div>
+<div class="doc" data-c="ins"><div class="fi">PDF</div><div class="t"><b>กรมธรรม์ MRTA</b><span class="sub">คุ้มครองถึง 2595</span></div><span class="badge b-bank">จากธนาคาร</span></div>
+<div class="doc" data-c="tax"><div class="fi">PDF</div><div class="t"><b>ใบเสร็จภาษีที่ดินฯ 2569</b><span class="sub">ชำระแล้ว ฿1,240</span></div><span class="badge b-me">อัปโหลดเอง</span></div>
+<div class="doc" data-c="home"><div class="fi">PDF</div><div class="t"><b>แบบแปลนบ้าน</b><span class="sub">จากโครงการ</span></div><span class="badge b-me">อัปโหลดเอง</span></div>
+</div>
+<div style="display:flex;gap:10px;flex-shrink:0"><button class="btn sec" style="flex:1">แชร์ลิงก์ปลอดภัย</button><button class="btn pri" style="flex:1">+ สแกน/อัปโหลด</button></div>
+</div></div>
+<div class="cap"><div class="tag">H3 · เอกสาร · <span class="try">ลองกดได้</span></div><h3>ตู้เอกสารดิจิทัล</h3>
+<ul><li>เอกสารจากธนาคาร เช่น สัญญากู้ หนังสือรับรองดอกเบี้ย และ MRTA เข้ามาอัตโนมัติ ลูกค้าไม่ต้องขอใหม่</li>
+<li>ลูกค้าสแกนเอกสารของตัวเองด้วยกล้อง ระบบ OCR อ่านวันหมดอายุมาตั้งแจ้งเตือนให้</li>
+<li>"แชร์ลิงก์ปลอดภัย" ส่งให้นายหน้า ช่าง หรือสำนักงานบัญชีได้ ลิงก์หมดอายุตามเวลาที่ตั้งและมีรหัสผ่าน</li>
+<li>ลองกดตัวกรองหมวดเอกสารด้านบน</li></ul></div>
+</div>
+
+<!-- H4 -->
+<div class="shot" id="h4">
+<div class="phone"><div class="scr">
+<div class="bar"><a class="back" href="#hub" aria-label="ย้อนกลับ"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg></a><div class="ttl">ต่ออายุประกันอัคคีภัย</div></div>
+<div class="peach">กรมธรรม์ปัจจุบันหมดอายุ <b>29 ต.ค. 2569</b> (อีก 24 วัน) ทุนประกันขั้นต่ำตามสัญญากู้ ฿1,500,000</div>
+<div class="h3">เลือกแผนต่ออายุ</div>
+<div id="insPlans" style="display:flex;flex-direction:column;gap:8px">
+<button class="plan" data-p="0" aria-pressed="true"><div style="display:flex;justify-content:space-between"><b>แผนเดิม · 1 ปี</b><b>฿1,450</b></div><div class="sub">ทุน ฿1,500,000 · อัคคีภัย ฟ้าผ่า ระเบิด</div></button>
+<button class="plan" data-p="1" aria-pressed="false"><div style="display:flex;justify-content:space-between"><b>แผนครอบคลุม · 1 ปี</b><b>฿2,390</b></div><div class="sub">+ น้ำท่วม พายุ แผ่นดินไหว</div></button>
+<button class="plan" data-p="2" aria-pressed="false"><div style="display:flex;justify-content:space-between"><b>แผนเดิม · 3 ปี</b><b>฿3,980</b></div><div class="sub">ประหยัดกว่าต่อทีละปี ~฿370</div></button>
+</div>
+<div class="h3">ปฏิทินบ้านของฉัน</div>
+<div class="card" style="padding:14px 14px 0">
+<div class="tl"><div class="dot"><i style="background:#C2410C"></i><s></s></div><div class="body"><b>29 ต.ค.</b> ประกันอัคคีภัยหมดอายุ</div></div>
+<div class="tl"><div class="dot"><i></i><s></s></div><div class="body"><b>ม.ค. 2570</b> ดอกเบี้ยคงที่สิ้นสุด</div></div>
+<div class="tl"><div class="dot"><i></i></div><div class="body"><b>30 เม.ย. 2570</b> ภาษีที่ดินและสิ่งปลูกสร้าง</div></div>
+</div>
+<button class="btn pri" style="margin-top:auto" id="insPay">ชำระ ฿1,450 และต่ออายุ</button>
+</div></div>
+<div class="cap"><div class="tag">H4 · แจ้งเตือน · <span class="try">ลองกดได้</span></div><h3>แจ้งเตือนและต่ออายุประกัน</h3>
+<ul><li>แจ้งเตือนล่วงหน้า 45 / 30 / 7 วัน ผ่าน push และ LINE ถ้าลูกค้าเปิดรับ</li>
+<li>ต่ออายุได้ในหน้าเดียว เทียบแผนได้ ยอดชำระบนปุ่มเปลี่ยนตามแผนที่เลือก ลองกดดู</li>
+<li>ปฏิทินบ้านรวมทุกวันสำคัญ ทั้งประกัน ดอกเบี้ยคงที่ และภาษีที่ดิน ซึ่งสำนักงานเขตหรือ อบต. เป็นผู้เรียกเก็บ แอปทำหน้าที่เตือนและเก็บใบเสร็จ</li></ul></div>
+</div>
+
+<!-- H5 -->
+<div class="shot" id="h5">
+<div class="phone"><div class="scr">
+<div class="bar"><a class="back" href="#hub" aria-label="ย้อนกลับ"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg></a><div class="ttl">ซ่อม-แต่งบ้าน</div></div>
+<div class="qr"><button class="chip" aria-pressed="false">ช่างแอร์</button><button class="chip" aria-pressed="false">หลังคารั่ว</button><button class="chip" aria-pressed="true">โซลาร์รูฟ</button><button class="chip" aria-pressed="false">ต่อเติมครัว</button></div>
+<div class="card" style="padding:14px;display:flex;flex-direction:column;gap:8px">
+<div style="display:flex;justify-content:space-between;align-items:flex-start;gap:8px"><div><b style="font-size:14px">[ชื่อผู้ติดตั้งพาร์ทเนอร์]</b><div class="sub">ผ่านการคัดเลือกโดยธนาคาร · ใกล้คุณ 4 กม.</div></div><span class="badge b-bank">รับรอง</span></div>
+<div style="display:flex;gap:14px;font-size:12px;color:var(--muted)"><span>★ 4.8 (212 งาน)</span><span>รับประกันงาน 5 ปี</span></div>
+<div class="row" style="border-top:1px solid #EFEBE2"><span>ระบบ 5 kW (ใบเสนอราคา)</span><b>฿165,000</b></div>
+</div>
+<div class="h3">สินเชื่อซ่อมแซม-ต่อเติม</div>
+<div class="card" style="padding:14px;display:flex;flex-direction:column;gap:10px">
+<label for="rl" style="display:flex;justify-content:space-between;font-size:13px"><span>วงเงิน</span><b id="rlAmt">฿165,000</b></label>
+<input id="rl" type="range" min="50000" max="500000" step="5000" value="165000">
+<label for="ry" style="display:flex;justify-content:space-between;font-size:13px"><span>ระยะเวลา</span><b id="ryAmt">10 ปี</b></label>
+<input id="ry" type="range" min="1" max="20" step="1" value="10">
+<div class="pale" style="display:flex;justify-content:space-between;align-items:center"><span>ผ่อนประมาณ</span><b class="disp" style="font-size:20px;color:var(--teal)" id="rlPmt">฿0/เดือน</b></div>
+<div class="sub" id="rlSave">ค่าไฟลดลงโดยประมาณ ฿1,900/เดือน</div>
+</div>
+<button class="btn pri" style="margin-top:auto">ขอใบเสนอราคา + ยื่นสินเชื่อ</button>
+<div class="sub" style="text-align:center">อัตราดอกเบี้ยตัวอย่าง 4.5% ต่อปี · ธนาคารจ่ายเงินตรงให้ผู้รับเหมาตามงวดงาน</div>
+</div></div>
+<div class="cap"><div class="tag">H5 · ซ่อม-แต่ง · <span class="try">ลองกดได้</span></div><h3>หาช่างและสินเชื่อซ่อมแซม</h3>
+<ul><li>เลือกงานแล้วระบบจับคู่ช่างหรือผู้รับเหมาที่ธนาคารคัดเลือกแล้ว แสดงคะแนนจากลูกค้าจริงและการรับประกันงาน</li>
+<li>ใบเสนอราคาจากช่างกลายเป็นวงเงินสินเชื่อได้ทันที ลองเลื่อนวงเงินและระยะเวลาเพื่อดูค่างวด</li>
+<li>ธนาคารจ่ายเงินตรงให้ผู้รับเหมาตามงวดงาน ลูกค้าไม่เสี่ยงกับผู้รับเหมาทิ้งงาน ส่วนธนาคารรู้ว่าเงินกู้ถูกใช้ไปกับบ้านจริง</li></ul></div>
+</div>
+
+</div>
+</section>
+
+<!-- ================= FEATURE 2 ================= -->
+<section class="feature" id="ai">
+<div class="fhead">
+<div class="l">
+<div class="num">ฟีเจอร์ 2</div>
+<h2>ผู้ช่วย AI "น้องบ้าน"</h2>
+<p>ลูกค้าถามเรื่องบ้านและสินเชื่อด้วยภาษาปกติ หรือกดพูดแทนการพิมพ์ ซึ่งช่วยกลุ่มผู้สูงอายุ น้องบ้านตอบจากข้อมูลบัญชีจริงของลูกค้า ช่วยกรอกและเตรียมคำขอให้ได้ แต่ธุรกรรมที่กระทบเงินหรือสัญญา ลูกค้าต้องกดยืนยันเองทุกครั้ง</p>
+</div>
+<div class="kpi"><h4>ผลที่คาดหวังและตัวชี้วัด</h4><ul>
+<li>สายเข้า Call Center ลดลง → วัดจากสัดส่วนคำถามที่จบในแชทโดยไม่ต้องส่งต่อ</li>
+<li>ช่วยลูกค้าได้ก่อนเป็นหนี้เสีย → วัดจากจำนวนคำขอมาตรการที่ยื่นก่อนค้างชำระ</li>
+<li>ความพึงพอใจหลังสนทนา (CSAT) และอัตราตอบผิดที่ตรวจพบ</li>
+</ul></div>
+</div>
+
+<div class="screens">
+
+<!-- A1 -->
+<div class="shot">
+<div class="phone"><div class="scr">
+<div class="bar"><div><div class="ttl">น้องบ้าน</div><div class="sub">ตอบจากข้อมูลบัญชีของคุณ · ภาษาไทย/อังกฤษ</div></div></div>
+<div class="chat" id="chat1">
+<div class="bub ai">สวัสดีค่ะคุณ [ชื่อ] วันนี้ให้น้องบ้านช่วยเรื่องอะไรดีคะ</div>
+<div class="bub me">งวดเดือนนี้ 9,200 ตัดต้นเท่าไร ตัดดอกเท่าไร</div>
+<div class="bub ai">งวด ก.ย. 2569 แบ่งเป็น
+<div style="display:flex;height:12px;border-radius:6px;overflow:hidden;margin:8px 0"><div style="width:41%;background:#0F5257"></div><div style="width:59%;background:#F2A65A"></div></div>
+<div style="display:flex;justify-content:space-between;font-size:12.5px"><span>■ เงินต้น <b>฿3,825</b></span><span style="color:#8A350A">■ ดอกเบี้ย <b>฿5,375</b></span></div>
+<div style="font-size:12.5px;color:var(--muted);margin-top:6px">ช่วงต้นสัญญาดอกเบี้ยจะสูงกว่าเงินต้นเป็นเรื่องปกติ สัดส่วนเงินต้นจะเพิ่มขึ้นทุกปี</div></div>
+</div>
+<div class="qr" id="qr1">
+<button class="chip" data-q="y">ทั้งปีจ่ายดอกไปเท่าไร</button>
+<button class="chip" data-q="x">ถ้าโปะ 2,000 ล่ะ</button>
+<button class="chip" data-q="r">ดอกเบี้ยจะขึ้นเมื่อไร</button>
+</div>
+<div class="inbar"><div class="field">พิมพ์หรือกดไมค์เพื่อพูด</div><button class="mic" aria-label="พูด"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0"/><path d="M12 17v5"/></svg></button></div>
+</div></div>
+<div class="cap"><div class="tag">A1 · อธิบายงวด · <span class="try">ลองกดได้</span></div><h3>ถาม-ตอบเรื่องงวดผ่อน</h3>
+<ul><li>คำตอบมีกราฟแท่งแบ่งเงินต้นกับดอกเบี้ย ใช้สีเดียวกับทั้งแอป</li>
+<li>ตัวเลขดึงจากระบบสินเชื่อจริงผ่าน API ไม่ให้ AI แต่งตัวเลขเอง ตัว AI ทำหน้าที่เรียบเรียงคำอธิบายเท่านั้น</li>
+<li>คำถามแนะนำด้านล่างช่วยคนที่ไม่รู้จะถามอะไร ลองกดเพื่อดูคำตอบ</li></ul></div>
+</div>
+
+<!-- A2 + A3 -->
+<div class="shot">
+<div class="phone"><div class="scr">
+<div class="bar"><div><div class="ttl">น้องบ้าน</div><div class="sub">ช่วยเหลือเรื่องการผ่อน</div></div></div>
+<div class="chat">
+<div class="bub me">เดือนหน้ารายได้ลด ผ่อนไม่ไหวทำยังไงดี</div>
+<div class="bub ai">เข้าใจค่ะ เรื่องนี้แก้ได้ และ<b>ยิ่งแจ้งก่อนค้างชำระยิ่งดี</b> เพราะประวัติของคุณจะไม่เสีย คุณมีทางเลือกประมาณนี้ค่ะ</div>
+<div id="hardPlans" style="display:flex;flex-direction:column;gap:8px;align-self:stretch">
+<button class="plan" data-i="0" aria-pressed="true"><div style="display:flex;justify-content:space-between"><b>พักชำระเงินต้น 6 เดือน</b><b>฿5,375</b></div><div class="sub">จ่ายเฉพาะดอกเบี้ย แล้วกลับมาผ่อนปกติ</div></button>
+<button class="plan" data-i="1" aria-pressed="false"><div style="display:flex;justify-content:space-between"><b>ขยายระยะเวลาผ่อน +5 ปี</b><b>฿8,330</b></div><div class="sub">ค่างวดลดถาวร ดอกเบี้ยรวมเพิ่มขึ้น</div></button>
+<button class="plan" data-i="2" aria-pressed="false"><div style="display:flex;justify-content:space-between"><b>ลดค่างวดชั่วคราว 12 เดือน</b><b>฿6,500</b></div><div class="sub">ส่วนต่างทบไปช่วงท้ายสัญญา</div></button>
+</div>
+<div class="sub" style="align-self:center">ค่างวดใหม่โดยประมาณ · ผลจริงขึ้นกับการพิจารณาของธนาคาร</div>
+</div>
+<button class="btn pri" id="openSheet">เตรียมคำขอแผนที่เลือก</button>
+<button class="btn sec">คุยกับเจ้าหน้าที่แทน</button>
+
+<div id="sheetWrap" hidden>
+<div class="dim"></div>
+<div class="sheet" id="sheet">
+<div class="grab"></div>
+<div class="ttl" style="font-size:17px">ตรวจสอบก่อนยื่นคำขอ</div>
+<div class="card" style="padding:2px 14px">
+<div class="row"><span>มาตรการ</span><b id="sPlan">พักชำระเงินต้น 6 เดือน</b></div>
+<div class="row"><span>ค่างวดใหม่โดยประมาณ</span><b id="sPmt">฿5,375</b></div>
+<div class="row"><span>เริ่มงวด</span><b>พ.ย. 2569</b></div>
+<div class="row"><span>สาเหตุ (จากที่คุณเล่า)</span><b>รายได้ลดลง</b></div>
+</div>
+<label style="display:flex;gap:10px;font-size:12.5px;line-height:1.55;align-items:flex-start"><input type="checkbox" id="agree" style="width:20px;height:20px;accent-color:#0F5257;flex-shrink:0;margin-top:2px">ฉันได้อ่านเงื่อนไขมาตรการ และยินยอมให้ธนาคารตรวจสอบข้อมูลรายได้</label>
+<button class="btn pri" id="confirmBtn" disabled style="opacity:.45">ยืนยันด้วยสแกนใบหน้า / PIN</button>
+<button class="btn sec" id="closeSheet">แก้ไข</button>
+</div>
+<div class="sheet" id="done" hidden style="align-items:center;text-align:center">
+<div class="grab"></div>
+<svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#0F5257" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg>
+<div class="ttl">ยื่นคำขอแล้ว</div>
+<div style="font-size:13px;line-height:1.6">เลขที่คำขอ RQ-[xxxx] · ผลพิจารณาภายใน 7 วันทำการ<br>ระหว่างนี้งวด ต.ค. ยังต้องชำระตามปกติ</div>
+<button class="btn sec" id="resetHard">ดูสถานะคำขอ</button>
+</div>
+</div>
+</div></div>
+<div class="cap"><div class="tag">A2–A3 · ผ่อนไม่ไหว · <span class="try">ลองกดได้</span></div><h3>พาไปยื่นมาตรการช่วยเหลือ</h3>
+<ul><li>เมื่อจับได้ว่าลูกค้ามีปัญหาการเงิน น้องบ้านเปลี่ยนน้ำเสียงเป็นแบบให้กำลังใจ ไม่ตำหนิ และบอกชัดว่าแจ้งก่อนค้างชำระดีกว่า</li>
+<li>เทียบทางเลือกพร้อมค่างวดใหม่ ซึ่งนำฟังก์ชันประนอมหนี้จากแอป BFRIEND มาไว้ตรงนี้</li>
+<li><b>AI กรอกแบบฟอร์มให้ แต่ยื่นเองไม่ได้</b> ลูกค้าต้องอ่านสรุป ติ๊กยินยอม และยืนยันตัวตนเอง ลองกดเลือกแผน → เตรียมคำขอ → ติ๊ก → ยืนยัน</li></ul></div>
+</div>
+
+<!-- A4 -->
+<div class="shot">
+<div class="phone"><div class="scr">
+<div class="bar"><div><div class="ttl">ทางลัดของน้องบ้าน</div><div class="sub">งานที่ถามบ่อยที่สุด ทำจบในแชท</div></div></div>
+<div class="card" style="padding:14px;display:flex;flex-direction:column;gap:10px">
+<div class="h3">ขอหนังสือรับรองดอกเบี้ย</div>
+<label for="yr" class="sub">ปีภาษี</label>
+<select id="yr"><option>2569</option><option>2568</option><option>2567</option></select>
+<button class="btn pri" id="genCert">สร้างหนังสือรับรอง</button>
+<div id="certOut" class="pale" hidden></div>
+</div>
+<div class="card" style="padding:14px;display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;justify-content:space-between;align-items:center"><div class="h3">สถานะคำขอกู้เพิ่ม</div><span class="sub">RQ-[xxxx]</span></div>
+<div class="step"><div class="c done">✓</div><div style="font-size:13px"><b>ยื่นคำขอ</b><div class="sub">2 ต.ค. 10:24</div></div></div>
+<div class="step"><div class="c done">✓</div><div style="font-size:13px"><b>ตรวจเอกสาร</b><div class="sub">ครบถ้วน</div></div></div>
+<div class="step"><div class="c now">3</div><div style="font-size:13px"><b>นัดประเมินราคาทรัพย์</b><div class="sub" style="color:var(--orangeText)">เลือกวันนัดได้ภายใน 9 ต.ค.</div></div></div>
+<div class="step"><div class="c todo">4</div><div style="font-size:13px;color:var(--muted)"><b>พิจารณาอนุมัติ</b></div></div>
+<div class="step"><div class="c todo">5</div><div style="font-size:13px;color:var(--muted)"><b>ทำสัญญา & รับเงิน</b></div></div>
+</div>
+<button class="btn sec" style="margin-top:auto">เลือกวันนัดประเมิน</button>
+</div></div>
+<div class="cap"><div class="tag">A4 · ทางลัด · <span class="try">ลองกดได้</span></div><h3>งานที่ถามบ่อย ทำจบในแชท</h3>
+<ul><li>หนังสือรับรองดอกเบี้ยเลือกปีแล้วได้ PDF ทันที และระบบเก็บเข้าตู้เอกสาร Home Hub ให้อัตโนมัติ</li>
+<li>สถานะยื่นกู้แสดงแบบไทม์ไลน์ ขั้นที่ลูกค้าต้องทำอะไรเป็นสีส้ม ลดสายโทรถาม "ถึงไหนแล้ว"</li>
+<li>ทางลัดอื่นที่ใส่ได้: ขอ Statement ใบเสร็จค่างวด และเปลี่ยนที่อยู่ติดต่อ</li></ul></div>
+</div>
+
+<!-- A5 -->
+<div class="shot">
+<div class="phone"><div class="scr" style="gap:16px">
+<div class="bar" style="justify-content:space-between"><div class="ttl" style="font-size:22px">น้องบ้าน · โหมดเสียง</div></div>
+<div class="card" style="padding:16px;font-size:20px;line-height:1.6" id="voiceText">กดปุ่มไมค์แล้วพูดได้เลยค่ะ<br><span style="font-size:16px;color:var(--muted)">เช่น "งวดหน้าต้องจ่ายเท่าไร"</span></div>
+<button class="pulse" id="micBig" aria-label="เริ่มพูด" aria-pressed="false"><svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0"/><path d="M12 17v5"/></svg></button>
+<div style="text-align:center;font-size:18px;font-weight:600" id="micLabel">แตะเพื่อพูด</div>
+<div style="display:flex;gap:10px;margin-top:auto">
+<button class="btn sec" style="flex:1;height:56px;font-size:17px">🔊 อ่านซ้ำ</button>
+<button class="btn sec" style="flex:1;height:56px;font-size:17px">☎ โทรหาเจ้าหน้าที่</button>
+</div>
+<div class="sub" style="text-align:center;font-size:14px">ตัวอักษรใหญ่ · อ่านออกเสียงทุกคำตอบ · ปรับความเร็วเสียงได้</div>
+</div></div>
+<div class="cap"><div class="tag">A5 · ผู้สูงอายุ · <span class="try">ลองกดได้</span></div><h3>โหมดเสียงและตัวอักษรใหญ่</h3>
+<ul><li>ออกแบบสำหรับลูกค้าสูงวัยที่ไม่ถนัดพิมพ์: ปุ่มใหญ่ ตัวอักษร 20px ขึ้นไป และอ่านคำตอบออกเสียงอัตโนมัติ</li>
+<li>รองรับสำเนียงภาษาไทยหลายภาค ระบบแสดงข้อความที่ได้ยินให้ลูกค้าเห็นก่อนตอบ เพื่อแก้ได้ถ้าฟังผิด</li>
+<li>ปุ่มโทรหาเจ้าหน้าที่แสดงตลอดเวลา ไม่บังคับให้คุยกับ AI · ลองแตะไมค์</li></ul></div>
+</div>
+
+<!-- A6 -->
+<div class="shot">
+<div class="phone"><div class="scr">
+<div class="bar"><div><div class="ttl">ส่งต่อเจ้าหน้าที่</div><div class="sub">คุณไม่ต้องเล่าเรื่องซ้ำ</div></div></div>
+<div class="pale"><b>น้องบ้านสรุปเรื่องให้เจ้าหน้าที่แล้ว</b></div>
+<div class="card" style="padding:2px 14px">
+<div class="row"><span>เรื่อง</span><b>ขอมาตรการช่วยเหลือ</b></div>
+<div class="row"><span>บัญชี</span><b>สินเชื่อบ้าน ···4821</b></div>
+<div class="row"><span>สถานะชำระ</span><b style="color:var(--teal)">ปกติ ไม่มีค้าง</b></div>
+<div class="row"><span>สิ่งที่ลูกค้าถาม</span><b style="text-align:right">รายได้ลด สนใจพักต้น</b></div>
+<div class="row"><span>สิ่งที่ AI ตอบไปแล้ว</span><b style="text-align:right">เทียบ 3 มาตรการ</b></div>
+</div>
+<div class="h3">เลือกช่องทาง</div>
+<div style="display:flex;flex-direction:column;gap:8px">
+<button class="plan" aria-pressed="true"><div style="display:flex;justify-content:space-between"><b>แชทกับเจ้าหน้าที่</b><span class="sub">รอประมาณ 3 นาที</span></div></button>
+<button class="plan" aria-pressed="false"><div style="display:flex;justify-content:space-between"><b>ให้เจ้าหน้าที่โทรกลับ</b><span class="sub">เลือกเวลาได้</span></div></button>
+<button class="plan" aria-pressed="false"><div style="display:flex;justify-content:space-between"><b>นัดพบที่สาขา</b><span class="sub">[สาขาใกล้คุณ]</span></div></button>
+</div>
+<button class="btn pri" style="margin-top:auto">เริ่มคุยกับเจ้าหน้าที่</button>
+<div class="sub" style="text-align:center">เวลาทำการ จ.–ศ. 08:30–19:00 · นอกเวลาเลือก "โทรกลับ"</div>
+</div></div>
+<div class="cap"><div class="tag">A6 · Human handoff</div><h3>ส่งต่อเจ้าหน้าที่แบบไม่ต้องเล่าซ้ำ</h3>
+<ul><li>ส่งต่ออัตโนมัติเมื่อ AI ไม่มั่นใจ เมื่อลูกค้าขอ เมื่อมีการร้องเรียน หรือเมื่อเรื่องอ่อนไหวทางการเงินถึงเกณฑ์ที่ธนาคารกำหนด</li>
+<li>เจ้าหน้าที่ได้สรุปบทสนทนาและข้อมูลบัญชีทันที ลูกค้าไม่ต้องเล่าเรื่องซ้ำ เวลาคุยต่อสายสั้นลง</li>
+<li>ลูกค้าเลือกช่องทางได้ทั้งแชท โทรกลับ หรือนัดสาขา</li></ul></div>
+</div>
+
+</div>
+</section>
+
+<!-- ================= BEHIND ================= -->
+<section class="feature" id="behind">
+<div class="fhead"><div class="l"><div class="num">เบื้องหลังระบบ</div><h2>ข้อมูล กติกา และความปลอดภัย</h2>
+<p>สิ่งที่ต้องวางไว้ก่อนพัฒนา เพื่อให้ทั้งสองฟีเจอร์ใช้งานได้จริงในธนาคารรัฐ</p></div></div>
+<div class="arch">
+<div class="box"><h4>แหล่งข้อมูล</h4><ul>
+<li>ระบบสินเชื่อ (Core Loan): ยอดหนี้ ตารางผ่อน อัตราดอกเบี้ย</li>
+<li>ฐานราคาประเมินทรัพย์ของธนาคาร + ดัชนีราคาที่อยู่อาศัย</li>
+<li>ระบบเอกสาร (e-Document) และบริษัทประกันพาร์ทเนอร์</li>
+<li>เครือข่ายช่างหรือผู้รับเหมาที่ผ่านการคัดเลือก</li></ul></div>
+<div class="box"><h4>กติกาของ AI (Guardrails)</h4><ul>
+<li>ตัวเลขทุกตัวมาจาก API ไม่ให้โมเดลคำนวณหรือเดาเอง</li>
+<li>ทำธุรกรรมแทนลูกค้าไม่ได้ ทำได้แค่เตรียมคำขอ ลูกค้าต้องยืนยันเอง</li>
+<li>ไม่ให้คำแนะนำการลงทุน และบอกเสมอว่าค่าประมาณไม่ใช่ผลอนุมัติ</li>
+<li>ส่งต่อเจ้าหน้าที่เมื่อไม่มั่นใจ หรือเมื่อตรวจพบความเปราะบาง</li></ul></div>
+<div class="box"><h4>ข้อมูลส่วนบุคคล (PDPA)</h4><ul>
+<li>ขอความยินยอมแยกสำหรับประเมินมูลค่าบ้าน OCR เอกสาร และแชร์ข้อมูลให้พาร์ทเนอร์</li>
+<li>เอกสารเข้ารหัส ลิงก์แชร์มีวันหมดอายุและบันทึกการเข้าถึง</li>
+<li>บทสนทนาเก็บตามระยะเวลาที่กำหนด และลูกค้าลบประวัติได้</li></ul></div>
+<div class="box"><h4>ลำดับพัฒนา</h4><ul>
+<li><b>ขั้น 1:</b> ตู้เอกสาร + แจ้งเตือน + ทางลัด AI (หนังสือรับรอง, สถานะ)</li>
+<li><b>ขั้น 2:</b> แชทอธิบายงวด + มาตรการช่วยเหลือ + ส่งต่อเจ้าหน้าที่</li>
+<li><b>ขั้น 3:</b> มูลค่าบ้าน/Equity + ต่อประกัน + ช่างและสินเชื่อซ่อมแซม + โหมดเสียง</li></ul></div>
+</div>
+<p class="foot">เอกสารแนวคิดเพื่อการนำเสนอ ไม่ใช่ดีไซน์ทางการของธนาคาร ตัวเลข ชื่อ ที่อยู่ อัตราดอกเบี้ย และเบี้ยประกันทั้งหมดเป็นข้อมูลตัวอย่าง</p>
+</section>
+</div>
+
+<script>
+(function(){
+  function fmt(v){return Math.round(v).toLocaleString('en-US');}
+  function group(sel,cb){var bs=document.querySelectorAll(sel);bs.forEach(function(b){b.addEventListener('click',function(){bs.forEach(function(x){x.setAttribute('aria-pressed','false');});b.setAttribute('aria-pressed','true');if(cb)cb(b);});});}
+
+  // H3 doc filter
+  group('#docFilter .chip',function(b){var f=b.dataset.f;document.querySelectorAll('#docList .doc').forEach(function(d){d.style.display=(f==='all'||d.dataset.c===f)?'':'none';});});
+
+  // H4 insurance
+  var prices=['1,450','2,390','3,980'];
+  group('#insPlans .plan',function(b){document.getElementById('insPay').textContent='ชำระ ฿'+prices[+b.dataset.p]+' และต่ออายุ';});
+
+  // H5 repair loan
+  var rl=document.getElementById('rl'),ry=document.getElementById('ry');
+  function calc(){var P=+rl.value,n=+ry.value*12,i=0.045/12;var p=P*i/(1-Math.pow(1+i,-n));
+    document.getElementById('rlAmt').textContent='฿'+fmt(P);document.getElementById('ryAmt').textContent=ry.value+' ปี';
+    document.getElementById('rlPmt').textContent='฿'+fmt(p)+'/เดือน';}
+  rl.addEventListener('input',calc);ry.addEventListener('input',calc);calc();
+  document.querySelectorAll('#h5 .qr .chip').forEach(function(c,_,all){c.addEventListener('click',function(){all.forEach(function(x){x.setAttribute('aria-pressed','false');});c.setAttribute('aria-pressed','true');});});
+
+  // A1 quick replies
+  var answers={
+    y:['ทั้งปีจ่ายดอกไปเท่าไร','ปี 2569 (ม.ค.–ก.ย.) คุณจ่ายดอกเบี้ยไปแล้ว <b>฿48,690</b> และเงินต้น <b>฿34,110</b> ถ้าต้องการใช้ลดหย่อนภาษี กดขอหนังสือรับรองดอกเบี้ยได้เลยค่ะ'],
+    x:['ถ้าโปะ 2,000 ล่ะ','ถ้าโปะเพิ่ม <b>฿2,000/เดือน</b> จะหมดหนี้เร็วขึ้นประมาณ <b>5 ปี</b> และประหยัดดอกเบี้ยราว <b>฿2.3 แสน</b> ค่ะ ตั้งโปะอัตโนมัติให้ไหมคะ? <i>(ต้องยืนยันด้วย PIN)</i>'],
+    r:['ดอกเบี้ยจะขึ้นเมื่อไร','อัตราคงที่ 3.50% ของคุณสิ้นสุด <b>ม.ค. 2570</b> หลังจากนั้นจะเป็นอัตราลอยตัวตามประกาศของธนาคาร ค่างวดอาจเพิ่มเป็นประมาณ <b>฿10,450</b> คุณขอปรับอัตรา (Re-pricing) ล่วงหน้าได้ค่ะ']
+  };
+  var chat=document.getElementById('chat1');
+  document.querySelectorAll('#qr1 .chip').forEach(function(b){b.addEventListener('click',function(){
+    var a=answers[b.dataset.q];var m=document.createElement('div');m.className='bub me';m.textContent=a[0];chat.appendChild(m);
+    var t=document.createElement('div');t.className='bub ai';t.textContent='กำลังดูข้อมูลบัญชี…';chat.appendChild(t);chat.scrollTop=chat.scrollHeight;
+    setTimeout(function(){t.innerHTML=a[1];chat.scrollTop=chat.scrollHeight;},700);
+    b.remove();
+  });});
+
+  // A2/A3 hardship
+  var plans=[['พักชำระเงินต้น 6 เดือน','฿5,375'],['ขยายระยะเวลาผ่อน +5 ปี','฿8,330'],['ลดค่างวดชั่วคราว 12 เดือน','฿6,500']],sel=0;
+  group('#hardPlans .plan',function(b){sel=+b.dataset.i;});
+  var wrap=document.getElementById('sheetWrap'),sheet=document.getElementById('sheet'),done=document.getElementById('done'),agree=document.getElementById('agree'),cb=document.getElementById('confirmBtn');
+  document.getElementById('openSheet').addEventListener('click',function(){document.getElementById('sPlan').textContent=plans[sel][0];document.getElementById('sPmt').textContent=plans[sel][1];agree.checked=false;cb.disabled=true;cb.style.opacity=.45;sheet.hidden=false;done.hidden=true;wrap.hidden=false;});
+  document.getElementById('closeSheet').addEventListener('click',function(){wrap.hidden=true;});
+  agree.addEventListener('change',function(){cb.disabled=!agree.checked;cb.style.opacity=agree.checked?1:.45;});
+  cb.addEventListener('click',function(){cb.textContent='กำลังยืนยันตัวตน…';setTimeout(function(){sheet.hidden=true;done.hidden=false;cb.textContent='ยืนยันด้วยสแกนใบหน้า / PIN';},900);});
+  document.getElementById('resetHard').addEventListener('click',function(){wrap.hidden=true;});
+
+  // A4 cert
+  document.getElementById('genCert').addEventListener('click',function(){var y=document.getElementById('yr').value;var o=document.getElementById('certOut');o.hidden=false;o.innerHTML='<b>หนังสือรับรองดอกเบี้ยปี '+y+'.pdf</b><br>พร้อมดาวน์โหลด · บันทึกเข้าตู้เอกสารแล้ว';});
+
+  // A5 voice
+  var mic=document.getElementById('micBig'),lab=document.getElementById('micLabel'),vt=document.getElementById('voiceText'),on=false,timer;
+  mic.addEventListener('click',function(){
+    on=!on;mic.classList.toggle('on',on);mic.setAttribute('aria-pressed',on);clearTimeout(timer);
+    if(on){lab.textContent='กำลังฟัง… แตะอีกครั้งเพื่อหยุด';vt.innerHTML='<span style="color:var(--muted)">ได้ยินว่า:</span><br>"งวดหน้าต้องจ่ายเท่าไร"';
+      timer=setTimeout(function(){on=false;mic.classList.remove('on');mic.setAttribute('aria-pressed','false');lab.textContent='แตะเพื่อพูด';vt.innerHTML='งวดหน้า <b>25 ตุลาคม</b><br>ต้องจ่าย <b style="color:var(--teal)">9,200 บาท</b> ค่ะ<br><span style="font-size:16px;color:var(--muted)">ระบบจะหักจากบัญชีออมทรัพย์ให้อัตโนมัติ</span>';},2200);}
+    else{lab.textContent='แตะเพื่อพูด';}
+  });
+})();
+</script>
+</body>
+</html>
